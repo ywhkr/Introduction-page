@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>싸이월드</title>
+    <link href="styles/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script>
+      function menuHome() {
+        document.getElementById("main").setAttribute("src", "home.html");
+        document.getElementById("menuhome").style =
+          "color: black; background-color:white;";
+        document.getElementById("menuResume").style =
+          "color: white; background-color:#298EB5";
+        document.getElementById("menuPortfolio").style =
+          "color: white; background-color:#298EB5";
+      }
+      function menuResume() {
+        document.getElementById("main").setAttribute("src", "resume.html");
+        document.getElementById("menuResume").style =
+          "color: black; background-color:white;";
+        document.getElementById("menuhome").style =
+          "color: white; background-color:#298EB5";
+        document.getElementById("menuPortfolio").style =
+          "color: white; background-color:#298EB5";
+      }
+      function menuPortfolio() {
+        document.getElementById("main").setAttribute("src", "portfolio.html");
+        document.getElementById("menuPortfolio").style =
+          "color: black; background-color:white;";
+        document.getElementById("menuhome").style =
+          "color: white; background-color:#298EB5";
+        document.getElementById("menuResume").style =
+          "color: white; background-color:#298EB5";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="outerbox">
+        <main class="wrapper">
+          <section class="wrapper__left">
+            <h1 class="sr-only">자기소개</h1>
+            <div class="wrapper__left__header">
+              <div class="today">
+                TODAY <span class="zero">1,234</span> | TOTAL
+                <span class="count">12,345</span>
+              </div>
+            </div>
+            <div class="wrapper__left__body">
+              <header class="header">
+                <img src="images/profile-img.jpg" class="headerGrey"></img>
+                <div class="line"></div>
+                <div class="profileWrapper">
+                  <div class="profile">
+                    <i class="fas fa-file-signature"></i> 여운화
+                  </div>
+                  <div class="profile"><i class="fas fa-phone"></i> 010-3316-0683</div>
+                  <div class="profile">
+                    <i class="fas fa-envelope-square"></i> dnsghk2@gmail.com
+                  </div>
+                  <div class="profile">
+                    <i class="fas fa-images"></i> @hardwork20233
+                  </div>
+                </div>
+              </header>
+              <footer class="footer">
+                <div class="feelWrapper">
+                  <div class="feel">오늘의 기분</div>
+                  <select class="feelSelect">
+                    <option>기쁨 😀</option>
+                    <option>슬픔 😭</option>
+                    <option>분노 😡</option>
+                    <option>행복 😊</option>
+                  </select>
+                </div>
+              </footer>
+            </div>
+          </section>
+          <section class="wrapper__right">
+            <h1 class="sr-only">방명록</h1>
+            <div class="wrapper__right__header">
+              <div class="wrapper__right__title">WELCOME TO MY PAGE</div>
+            </div>
+            <div class="wrapper__right__body">
+              <!-- <iframe src="home.html"></iframe>
+              <iframe src="game.html"></iframe> -->
+              <!-- 누를 때마다 src가 변경되면서 iframe이 바뀌는 거임 -->
+              <iframe id="main" src="home.html"></iframe>
+            </div>
+          </section>
+          <div class="navigation">
+            <div id="menuhome" class="navigation__item" onclick="menuHome()">
+              방명록
+            </div>
+            <div id="menuResume" class="navigation__item" onclick="menuResume()">
+              Resume
+            </div>
+            <div
+              id="menuPortfolio"
+              class="navigation__item"
+              onclick="menuPortfolio()"
+            >
+              Portfolio
+            </div>
+          </div>
+        </main>
+      </div>
+    </d>
+  </body>
+</html>

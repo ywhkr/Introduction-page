@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>홈</title>
+    <link href="styles/home.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="wrapper__header">
+            <div class="wrapper__title">
+                <div class="title">방명록</div>
+            </div>
+            <img src="./images/miniroom.jpg" alt="" class="miniroom">
+        </header>
+        <section class="wrapper__body">
+            <h2 class="sr-only">댓글</h2>
+            <div class="wrapper__title">
+                <div class="title">
+                    Friends Say
+                </div>
+            </div>
+                <form action="/dogs" id="instaForm">
+                    <input type="text" name="username" placeholder="username" />
+                    <input type="text" name="comment" placeholder="comment" />
+                    <button class="write">작성</button>
+                </form>
+                <ul id="comments">
+                    
+                </ul>
+           
+              
+              
+           
+        </section>
+        <script>   
+        const instaForm = document.querySelector("#instaForm");
+        const commentsContainer = document.querySelector("#comments");
+
+        instaForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const usernameInput = instaForm.elements.username;
+        const commentInput = instaForm.elements.comment;
+        addComment(usernameInput.value, commentInput.value);
+        usernameInput.value = "";
+        commentInput.value = "";
+        });
+
+        const addComment = (username, comment) => {
+        const newComment = document.createElement("li");
+        const bTag = document.createElement("b");
+        bTag.append(username);
+        newComment.append(bTag);
+        newComment.append(`: ${comment}`);
+        commentsContainer.append(newComment);
+        };
+        </script>
+</body>
+</html>
